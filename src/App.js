@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import NavBar from './components/navbar/NavBar';
+import ListOfGifs from './components/listofgif/ListOfGifs'
+import {Route} from "wouter"
+import Home from './pages/home/Home';
+import Detail from './pages/detail/Detail';
 
-function App() {
+export default function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <NavBar/>
+      <section className='app-content'>
+        <Route 
+          component={ListOfGifs} 
+          path='/gif/:keyword' 
+        />
+        <Route 
+          component={Home} 
+          path='/' 
+        />
+        <Route 
+          component={Detail} 
+          path='/detail' 
+        />
+      </section>
     </div>
   );
 }
-
-export default App;

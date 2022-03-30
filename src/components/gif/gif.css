@@ -1,0 +1,26 @@
+
+.gif{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    width: 280px;
+    background-color: rgb(86, 82, 102);
+    text-decoration: none;
+    color: rgb(240, 240, 240);
+    overflow: hidden;
+}
+
+.gif span{
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    padding: 4px 8px;
+    font-size: 10px;
+    background-color: rgba(19, 5, 51, 0.576);
+    border-radius: 6px;
+}
+.gif img{
+    width: 100%;
+    object-fit: fill;
+}

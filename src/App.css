@@ -1,12 +1,12 @@
 body {
   text-align: center;
-  background-color: hsl(220, 13%, 18%);
+  background-color: hsla(220, 13%, 18%, 0.987);
 }
 
 .app-content{
   display: grid;
   place-items: center;
-  margin-top: 20px;
+  margin-top: 2px;
   width: 100%;  
   gap: 12px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

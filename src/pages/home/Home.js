@@ -1,6 +1,6 @@
 import { React, useState} from 'react'
 import { Link , useLocation} from 'wouter'
-
+import "./home.css"
 
 const POPULAR_GIFS = ['Matrix', 'Chile', 'Colombia', 'Panda']
 
@@ -13,21 +13,21 @@ export default function Home() {
     e.preventDefault();
     pushLocation(`/gif/${keyword}`)
   }
-  
+
   const handleChange = (e) =>{
     setKeyword(e.target.value)
   }
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='searchBar'>
         <input 
           type='text' 
           value={keyword}
           onChange={handleChange}
-          placeholder='Busca gif aquí...'
+          placeholder='Search all the GIFs and Stickers'
           />
-          <button type='submit'>Buscar</button>
+          <button type='submit'>X</button>
       </form>
     
       <div className='links'>
